@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap");
+
+    * {
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: "Kanit", sans-serif;
+    }
+
+    .main-two {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .main {
+      background-color: #609cabd5;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 50px;
+      padding: 25px;
+      width: 300px;
+      height: 400px;
+      position: relative;
+      border-radius: 14px;
+      transition: 0.7s;
+    }
+
+    .main:hover {
+      box-shadow: 40px 20px 0px #022b3a;
+      transform: translate(-10px, -10px);
+    }
+
+    .main:hover h1 {
+      color: white;
+    }
+
+    h1 {
+      text-align: left;
+      letter-spacing: 7px;
+      font-size: 2.4rem;
+      transition: 0.5s;
+    }
+
+    span {
+      position: relative;
+    }
+    label {
+      position: absolute;
+      left: 55%;
+      top: 5%;
+      transition: 0.2s;
+      color: rgb(11, 65, 75);
+    }
+    input {
+      width: 50%;
+      transition: 0.5s;
+      padding: 4px;
+      border-top: none;
+      border-right: none;
+      border-left: 2px rgb(11, 65, 75) solid;
+      border-bottom: 2px rgb(11, 65, 75) solid;
+      background-color: transparent;
+      color: white;
+    }
+
+    input:focus {
+      width: 90%;
+      outline: none;
+      border-top: none;
+      border-right: none;
+      border-bottom: 2px black solid;
+      background-color: transparent;
+    }
+
+    input:focus ~ label {
+      left: 4%;
+      top: -85%;
+      padding: 4px;
+    }
+
+    select {
+      padding: 5px;
+      color: white;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+      font-weight: 900;
+      letter-spacing: 5px;
+      background-color: transparent;
+      outline: 1px white solid;
+      border: none;
+      transition: 0.5s;
+      position: relative;
+    }
+
+    select:focus {
+      outline: 1px rgb(0, 0, 0) solid;
+      color: black;
+    }
+
+    option {
+      padding: 2px;
+      font-family: "Kanit", sans-serif;
+      letter-spacing: 7px;
+      background: #bfdbf7;
+      color: #022b3a;
+      transition: 0.4s;
+    }
+    option:hover {
+      background-color: #022b3a;
+      color: #bfdbf7;
+    }
+
+    option:focus {
+      background: #022b3a;
+      color: #bfdbf7;
+    }
+
+    button {
+      width: 35%;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+      letter-spacing: 2px;
+      position: absolute;
+      bottom: 10px;
+      font-weight: 550;
+      padding: 5px 10px;
+      cursor: pointer;
+      border: none;
+      position: relative;
+      color: #0d363e;
+      outline: 0.5px #16697a solid;
+      overflow: hidden;
+      transition: 0.7s;
+      border-radius: 2px;
+    }
+
+    button::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      background: #ffa62b;
+      width: 17%;
+      left: -75px;
+      transform: skew(10deg);
+      transition: 0.5s;
+    }
+
+    button:hover::after {
+      left: 120%;
+    }
+
+    button:hover {
+      color: #4fd7f2;
+      background-color: #0d363e;
+      outline: 0.5px #16697a solid;
+    }
+
+    button:active {
+      transform: scale(0.8);
+    }
+  </style>
+  <body>
+    <form class="main">
+      <h1>Register</h1>
+      <div class="main-two">
+        <span>
+          <input type="text" id="fname" required />
+          <label for="fname">firstname</label>
+        </span>
+
+        <span>
+          <input type="text" id="fname" required />
+          <label for="fname">lastname</label>
+        </span>
+
+        <span>
+          <input type="text" id="fname" required />
+          <label for="fname">email/number</label>
+        </span>
+
+        <select name="" id="gender">
+          <option value="male">male</option>
+          <option value="female">female</option>
+        </select>
+
+        <button>submit</button>
+      </div>
+    </form>
+  </body>
+</html>
